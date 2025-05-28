@@ -1,4 +1,7 @@
-﻿namespace BinarySerialization.Test.Issues.Issue27
+﻿using BinarySerialization.Attributes;
+using BinarySerialization.Constants;
+
+namespace BinarySerialization.Test.Issues.Issue27
 {
     public class LoadCarrierData
     {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BinarySerialization.Constants;
+using System;
 
 namespace BinarySerialization
 {

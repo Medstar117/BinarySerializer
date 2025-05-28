@@ -1,4 +1,6 @@
-﻿namespace BinarySerialization.Test.Issues.Issue124
+﻿using BinarySerialization.Attributes;
+
+namespace BinarySerialization.Test.Issues.Issue124
 {
     public class Packet1 : PacketBody
     {

@@ -1,4 +1,6 @@
-﻿namespace BinarySerialization.Test.WhenNot
+﻿using BinarySerialization.Attributes;
+
+namespace BinarySerialization.Test.WhenNot
 {
     public class WhenNotClass
     {

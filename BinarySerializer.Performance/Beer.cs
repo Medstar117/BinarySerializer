@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using BinarySerialization;
+using BinarySerialization.Attributes;
+using BinarySerialization.Constants;
 
 namespace BinarySerializer.Performance
 {

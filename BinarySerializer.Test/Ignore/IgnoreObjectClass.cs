@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BinarySerialization.Attributes;
+using System;
 
 namespace BinarySerialization.Test.Ignore
 {

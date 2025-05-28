@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BinarySerialization.Helpers;
+using BinarySerialization.Interfaces;
+using System;
 
 namespace BinarySerialization.Test.Encoding
 {

@@ -5,8 +5,12 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
-using System.Runtime.InteropServices;
+using BinarySerialization.Attributes;
+using BinarySerialization.Constants;
+using BinarySerialization.Exceptions;
 using BinarySerialization.Graph.ValueGraph;
+using BinarySerialization.Helpers;
+using BinarySerialization.Interfaces;
 
 namespace BinarySerialization.Graph.TypeGraph
 {
@@ -90,7 +94,7 @@ namespace BinarySerialization.Graph.TypeGraph
                     var getMethod = propertyInfo.GetGetMethod();
 
 #if NETSTANDARD1_3
-                    ValueGetter = RuntimeInformation.IsOSPlatform(OSPlatform.OSX)
+                    ValueGetter = System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform(System.Runtime.InteropServices.OSPlatform.OSX)
                         ? target => getMethod.Invoke(target, null)
                         : MagicMethods.MagicFunc(parentType, getMethod);
 #else
@@ -102,7 +106,7 @@ namespace BinarySerialization.Graph.TypeGraph
                     if (setMethod != null)
                     {
 #if NETSTANDARD1_3
-                        ValueSetter = RuntimeInformation.IsOSPlatform(OSPlatform.OSX)
+                        ValueSetter = System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform(System.Runtime.InteropServices.OSPlatform.OSX)
                             ? ((target, value) => setMethod.Invoke(target, new[] {value}))
                             : MagicMethods.MagicAction(parentType, setMethod);
 #else

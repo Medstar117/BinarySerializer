@@ -1,4 +1,6 @@
-﻿namespace BinarySerialization.Test.Issues.Issue34
+﻿using BinarySerialization.Interfaces;
+
+namespace BinarySerialization.Test.Issues.Issue34
 {
     internal class AdditionConverter : IValueConverter
     {

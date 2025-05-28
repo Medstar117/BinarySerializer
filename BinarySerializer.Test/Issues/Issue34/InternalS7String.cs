@@ -1,4 +1,6 @@
-﻿namespace BinarySerialization.Test.Issues.Issue34
+﻿using BinarySerialization.Attributes;
+
+namespace BinarySerialization.Test.Issues.Issue34
 {
     public class InternalS7String
     {

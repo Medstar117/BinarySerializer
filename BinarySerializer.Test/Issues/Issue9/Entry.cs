@@ -1,4 +1,6 @@
-﻿namespace BinarySerialization.Test.Issues.Issue9
+﻿using BinarySerialization.Attributes;
+
+namespace BinarySerialization.Test.Issues.Issue9
 {
     public class Entry
     {

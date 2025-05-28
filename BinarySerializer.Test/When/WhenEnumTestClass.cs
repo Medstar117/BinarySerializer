@@ -1,3 +1,5 @@
+using BinarySerialization.Attributes;
+
 namespace BinarySerialization.Test.When
 {
     public class WhenEnumTestClass

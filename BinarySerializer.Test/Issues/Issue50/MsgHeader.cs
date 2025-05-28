@@ -1,4 +1,7 @@
-﻿namespace BinarySerialization.Test.Issues.Issue50
+﻿using BinarySerialization.Attributes;
+using BinarySerialization.Constants;
+
+namespace BinarySerialization.Test.Issues.Issue50
 {
     public class MsgHeader
     {

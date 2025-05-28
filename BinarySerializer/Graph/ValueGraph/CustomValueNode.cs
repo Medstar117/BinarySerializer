@@ -2,6 +2,8 @@
 using System.Threading;
 using System.Threading.Tasks;
 using BinarySerialization.Graph.TypeGraph;
+using BinarySerialization.Interfaces;
+using BinarySerialization.Streams;
 
 namespace BinarySerialization.Graph.ValueGraph
 {

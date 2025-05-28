@@ -9,7 +9,7 @@ namespace BinarySerialization.Test.Issues.Issue27
         [TestMethod]
         public void TestPrematureStreamTermination()
         {
-            var serializer = new BinarySerializer {Endianness = BinarySerialization.Endianness.Little};
+            var serializer = new BinarySerializer {Endianness = Constants.Endianness.Little};
             var inBytes = new byte[] {0x01, 0x00, 0x00, 0x00, 0x40, 0x34};
 
             using (var stream = new MemoryStream(inBytes))

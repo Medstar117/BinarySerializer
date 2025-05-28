@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using BinarySerialization.Interfaces;
+using System.IO;
 
 namespace BinarySerialization.Test.Issues.Issue80
 {
@@ -8,7 +9,7 @@ namespace BinarySerialization.Test.Issues.Issue80
 
         public string Value { get; set; }
 
-        public void Serialize(Stream stream, BinarySerialization.Endianness endianness, BinarySerializationContext serializationContext)
+        public void Serialize(Stream stream, Constants.Endianness endianness, BinarySerializationContext serializationContext)
         {
             if (Value == null)
             {
@@ -22,7 +23,7 @@ namespace BinarySerialization.Test.Issues.Issue80
             }
         }
 
-        public void Deserialize(Stream stream, BinarySerialization.Endianness endianness, BinarySerializationContext serializationContext)
+        public void Deserialize(Stream stream, Constants.Endianness endianness, BinarySerializationContext serializationContext)
         {
             var length = stream.ReadByte();
 

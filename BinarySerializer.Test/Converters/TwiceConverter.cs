@@ -1,3 +1,5 @@
+using BinarySerialization.Interfaces;
+
 namespace BinarySerialization.Test.Converters
 {
     public class TwiceConverter : IValueConverter

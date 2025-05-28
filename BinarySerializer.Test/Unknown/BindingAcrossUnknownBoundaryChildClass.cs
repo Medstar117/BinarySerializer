@@ -1,4 +1,7 @@
-﻿namespace BinarySerialization.Test.Unknown
+﻿using BinarySerialization.Attributes;
+using BinarySerialization.Constants;
+
+namespace BinarySerialization.Test.Unknown
 {
     public class BindingAcrossUnknownBoundaryChildClass
     {

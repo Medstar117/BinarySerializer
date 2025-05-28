@@ -1,4 +1,6 @@
-﻿namespace BinarySerialization.Test.Issues.Issue88
+﻿using BinarySerialization.Attributes;
+
+namespace BinarySerialization.Test.Issues.Issue88
 {
     public class ParentClass
     {

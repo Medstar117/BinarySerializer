@@ -1,4 +1,6 @@
-﻿namespace BinarySerialization.Test.Issues.Issue30
+﻿using BinarySerialization.Attributes;
+
+namespace BinarySerialization.Test.Issues.Issue30
 {
     public class CommMessage<T> : IMessage<T> where T : class, IPayload
     {

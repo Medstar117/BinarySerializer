@@ -1,4 +1,7 @@
-﻿namespace BinarySerialization.Test.Issues.Issue88
+﻿using BinarySerialization.Attributes;
+using BinarySerialization.Constants;
+
+namespace BinarySerialization.Test.Issues.Issue88
 {
     public class ChildClass
     {

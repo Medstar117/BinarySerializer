@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using BinarySerialization.Exceptions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace BinarySerialization.Test.Unknown

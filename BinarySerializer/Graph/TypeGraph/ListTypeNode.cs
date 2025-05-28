@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Reflection;
 using BinarySerialization.Graph.ValueGraph;
+using BinarySerialization.Helpers;
 
 namespace BinarySerialization.Graph.TypeGraph
 {

@@ -1,9 +1,11 @@
-﻿namespace BinarySerialization.Test.Issues.Issue103
+﻿using BinarySerialization.Attributes;
+
+namespace BinarySerialization.Test.Issues.Issue103
 {
     public class MultipleFieldsCrc32
     {
         [FieldOrder(1)]
-        [FieldEndianness(BinarySerialization.Endianness.Big)]
+        [FieldEndianness(Constants.Endianness.Big)]
         [FieldCrc32(nameof(Crc32), Polynomial = 0x04C10DB7, InitialValue = 0, IsDataReflected = false, IsRemainderReflected = false, FinalXor = 0)]
         public ushort Length { get; set; }
 

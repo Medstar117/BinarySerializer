@@ -1,4 +1,6 @@
-﻿namespace BinarySerialization.Test.Issues.Issue12
+﻿using BinarySerialization.Attributes;
+
+namespace BinarySerialization.Test.Issues.Issue12
 {
     public class ChunkContainer
     {
@@ -16,7 +18,7 @@
         public string TypeId { get; set; }
 
         [FieldOrder(1)]
-        [FieldEndianness(BinarySerialization.Endianness.Big)]
+        [FieldEndianness(Constants.Endianness.Big)]
         public int ChunkLength { get; set; }
 
         [FieldOrder(2)]

@@ -1,3 +1,4 @@
+using BinarySerialization.Interfaces;
 using System;
 using System.Reflection;
 

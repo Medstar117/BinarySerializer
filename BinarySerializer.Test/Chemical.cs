@@ -1,4 +1,7 @@
-﻿namespace BinarySerialization.Test
+﻿using BinarySerialization.Attributes;
+using BinarySerialization.Constants;
+
+namespace BinarySerialization.Test
 {
     public abstract class Chemical
     {

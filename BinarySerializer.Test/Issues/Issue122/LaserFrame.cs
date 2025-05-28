@@ -1,4 +1,6 @@
-﻿namespace BinarySerialization.Test.Issues.Issue122
+﻿using BinarySerialization.Attributes;
+
+namespace BinarySerialization.Test.Issues.Issue122
 {
     public class LaserFrame
     {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BinarySerialization.Constants;
+using System;
 using System.Collections.Generic;
 
 namespace BinarySerialization.Graph.TypeGraph

@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using BinarySerialization.CustomEventArgs;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace BinarySerialization.Test
@@ -12,7 +13,7 @@ namespace BinarySerialization.Test
 
         protected static readonly BinarySerializer SerializerBe = new BinarySerializer
         {
-            Endianness = BinarySerialization.Endianness.Big
+            Endianness = Constants.Endianness.Big
         };
 
         protected static readonly string[] TestSequence = {"a", "b", "c"};

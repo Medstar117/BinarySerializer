@@ -1,4 +1,6 @@
-﻿namespace BinarySerialization.Test.Issues.Issue225
+﻿using BinarySerialization.Attributes;
+
+namespace BinarySerialization.Test.Issues.Issue225
 {
     public class ValueDescriptorDoubleValue
     {

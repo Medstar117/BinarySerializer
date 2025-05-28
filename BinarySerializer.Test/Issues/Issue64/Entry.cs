@@ -1,4 +1,7 @@
-﻿namespace BinarySerialization.Test.Issues.Issue64
+﻿using BinarySerialization.Attributes;
+using BinarySerialization.Constants;
+
+namespace BinarySerialization.Test.Issues.Issue64
 {
     public class Entry
     {

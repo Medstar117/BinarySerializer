@@ -1,4 +1,4 @@
-﻿using System.Text;
+﻿using BinarySerialization.Attributes;
 
 namespace BinarySerialization.Test.Issues.Issue225
 {

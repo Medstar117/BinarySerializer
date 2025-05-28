@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BinarySerialization.Constants;
+using System;
 
 namespace BinarySerialization
 {
@@ -36,7 +37,7 @@ namespace BinarySerialization
 
         /// <summary>
         ///     Initializes a new BindingInfo with a path and an optional converter.
-        ///     using RelativeSourceMode <see cref="BinarySerialization.RelativeSourceMode.Self" />.
+        ///     using RelativeSourceMode <see cref="RelativeSourceMode.Self" />.
         /// </summary>
         /// <param name="path">The path to the source member.</param>
         /// <param name="converterType">An optional converter.</param>
@@ -58,7 +59,7 @@ namespace BinarySerialization
 
         /// <summary>
         ///     Gets or sets the level of ancestor to look for, in
-        ///     <see cref="BinarySerialization.RelativeSourceMode.FindAncestor" /> RelativeSourceMode.
+        ///     <see cref="RelativeSourceMode.FindAncestor" /> RelativeSourceMode.
         ///     Use 1 to indicate the one nearest to the binding target element.
         /// </summary>
         public int AncestorLevel { get; set; }
@@ -69,7 +70,7 @@ namespace BinarySerialization
         public Type AncestorType { get; set; }
 
         /// <summary>
-        ///     Gets or sets a <see cref="BinarySerialization.RelativeSourceMode" /> value that describes the location of the
+        ///     Gets or sets a <see cref="Constants.RelativeSourceMode" /> value that describes the location of the
         ///     binding source member relative to the position of the binding target.
         /// </summary>
         public RelativeSourceMode RelativeSourceMode { get; set; }

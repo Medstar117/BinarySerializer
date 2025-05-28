@@ -1,4 +1,6 @@
-﻿namespace BinarySerialization.Test.Issues.Issue147
+﻿using BinarySerialization.Attributes;
+
+namespace BinarySerialization.Test.Issues.Issue147
 {
     class ClassB
     {

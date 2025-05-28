@@ -1,4 +1,6 @@
-﻿namespace BinarySerialization.Test.Issues.Issue151
+﻿using BinarySerialization.Attributes;
+
+namespace BinarySerialization.Test.Issues.Issue151
 {
     public class Request : dPayload
     {

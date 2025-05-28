@@ -1,4 +1,6 @@
-﻿namespace BinarySerialization.Test.Issues.Issue139
+﻿using BinarySerialization.Attributes;
+
+namespace BinarySerialization.Test.Issues.Issue139
 {
     public class Question : IQuestion
     {

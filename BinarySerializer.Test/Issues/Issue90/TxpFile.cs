@@ -1,4 +1,6 @@
-﻿namespace BinarySerialization.Test.Issues.Issue90
+﻿using BinarySerialization.Attributes;
+
+namespace BinarySerialization.Test.Issues.Issue90
 {
     public abstract class TxpFile
     {

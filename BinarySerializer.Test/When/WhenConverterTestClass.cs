@@ -1,3 +1,4 @@
+using BinarySerialization.Attributes;
 using BinarySerialization.Test.Converters;
 
 namespace BinarySerialization.Test.When

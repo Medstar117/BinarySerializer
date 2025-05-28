@@ -1,4 +1,5 @@
-﻿using BinarySerialization.Test.Issues.Issue139;
+﻿using BinarySerialization.Attributes;
+using BinarySerialization.Test.Issues.Issue139;
 
 namespace BinarySerialization.Test.Issues.Issue140
 {

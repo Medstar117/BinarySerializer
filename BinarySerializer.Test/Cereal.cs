@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using BinarySerialization.Attributes;
+using BinarySerialization.Constants;
+using System.Collections.Generic;
 using System.IO;
 
 namespace BinarySerialization.Test
