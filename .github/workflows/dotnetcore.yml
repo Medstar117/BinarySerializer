@@ -8,9 +8,8 @@ on:
 
 jobs:
   build:
-    permissions:
+    # permissions:
 #      packages: write
-      pull-requests: write
     runs-on: ubuntu-latest
     name: CI Build
 
@@ -29,7 +28,14 @@ jobs:
       run: dotnet build --configuration Release --no-restore
 
     - name: Test (inc Code Coverage)
-      run: dotnet test --verbosity normal --collect:"XPlat Code Coverage" --results-directory ./coverage
+      run: dotnet test --verbosity normal --collect:"XPlat Code Coverage" --results-directory ./coverage > ./test-results.txt
+
+    - name: Prettify Test Results
+      run: |
+        echo "<details><summary>Test Results</summary>" > ./test-results.md
+        cat ./test-results.txt >> ./test-results.md
+        echo "</details>" >> ./test-results.md
+        cat ./test-results.md >> $GITHUB_STEP_SUMMARY
 
     - name: Code Coverage Report
       uses: irongut/CodeCoverageSummary@v1.3.0
@@ -44,12 +50,21 @@ jobs:
         output: both
         thresholds: '60 80'
 
-#    - name: Add Coverage PR Comment
-#      uses: marocchino/sticky-pull-request-comment@v2
-#      if: github.event_name == 'pull_request'
-#      with:
-#        recreate: true
-#        path: code-coverage-results.md
+    - name: Write to Job Summary
+      run: cat code-coverage-results.md >> $GITHUB_STEP_SUMMARY
+
+    - name: Prepare Artifacts
+      run: |
+        mkdir -p ./pr
+        echo ${{ github.event.number }} > ./pr/pr-number
+        cat test-results.md > ./pr/test-results.md
+        cat code-coverage-results.md > ./pr/code-coverage-results.md
+
+    - name: Upload Artifacts
+      uses: actions/upload-artifact@v4.6.2
+      with:
+        name: pr
+        path: pr/
 
     # - name: Connect to Cygnus packages in GitHub
     #   run: dotnet nuget add source --username medstar117 --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/medstar117/index.json"
