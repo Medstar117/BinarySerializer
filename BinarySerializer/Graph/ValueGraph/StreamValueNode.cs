@@ -23,10 +23,11 @@ namespace BinarySerialization.Graph.ValueGraph
             var valueStream = (Stream) Value;
 
             var length = GetConstFieldLength();
+            var offset = GetFieldOffset() == null ? valueStream.Position : GetFieldOffset().Value;
 
             if (length != null)
             {
-                var valueStreamlet = new Streamlet(valueStream, valueStream.Position, length.ByteCount);
+                var valueStreamlet = new Streamlet(valueStream, offset, length.ByteCount);
                 valueStreamlet.CopyTo(stream);
             }
             else
@@ -40,10 +41,11 @@ namespace BinarySerialization.Graph.ValueGraph
             var valueStream = (Stream)Value;
 
             var length = GetConstFieldLength();
+            var offset = GetFieldOffset() == null ? valueStream.Position : GetFieldOffset().Value;
 
             if (length != null)
             {
-                var valueStreamlet = new Streamlet(valueStream, valueStream.Position, length.ByteCount);
+                var valueStreamlet = new Streamlet(valueStream, offset, length.ByteCount);
                 await valueStreamlet.CopyToAsync(stream, CopyToBufferSize, cancellationToken).ConfigureAwait(false);
             }
             else
@@ -57,10 +59,11 @@ namespace BinarySerialization.Graph.ValueGraph
             var rootStream = GetRootStream(stream);
 
             var length = GetFieldLength();
+            var offset = GetFieldOffset() == null ? rootStream.Position : GetFieldOffset().Value;
 
             Value = length != null
-                ? new Streamlet(rootStream, rootStream.Position, length.ByteCount)
-                : new Streamlet(rootStream, rootStream.Position);
+                ? new Streamlet(rootStream, offset, length.ByteCount)
+                : new Streamlet(rootStream, offset);
 
             if (length != null)
             {
@@ -79,10 +82,11 @@ namespace BinarySerialization.Graph.ValueGraph
             var rootStream = GetRootStream(stream);
 
             var length = GetFieldLength();
+            var offset = GetFieldOffset() == null ? rootStream.Position : GetFieldOffset().Value;
 
             Value = length != null
-                ? new Streamlet(rootStream, rootStream.Position, length.ByteCount)
-                : new Streamlet(rootStream, rootStream.Position);
+                ? new Streamlet(rootStream, offset, length.ByteCount)
+                : new Streamlet(rootStream, offset);
 
             if (length != null)
             {
