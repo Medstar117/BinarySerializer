@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BinarySerialization.Interfaces;
+using System;
 
 namespace BinarySerialization.Test.Issues.Issue12
 {

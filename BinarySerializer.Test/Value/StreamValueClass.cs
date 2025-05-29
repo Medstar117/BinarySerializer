@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using BinarySerialization.Attributes;
+using System.IO;
 
 namespace BinarySerialization.Test.Value
 {

@@ -1,6 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using BinarySerialization.Interfaces;
+using System;
 
 namespace BinarySerialization.Test.Issues.Issue61
 {

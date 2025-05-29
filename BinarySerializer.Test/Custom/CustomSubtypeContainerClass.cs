@@ -1,4 +1,6 @@
-﻿namespace BinarySerialization.Test.Custom
+﻿using BinarySerialization.Attributes;
+
+namespace BinarySerialization.Test.Custom
 {
     public class CustomSubtypeContainerClass
     {

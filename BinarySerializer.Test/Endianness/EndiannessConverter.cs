@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BinarySerialization.Interfaces;
+using System;
 
 namespace BinarySerialization.Test.Endianness
 {
@@ -10,15 +11,15 @@ namespace BinarySerialization.Test.Endianness
         public object Convert(object value, object parameter, BinarySerializationContext context)
         {
             if (value == null)
-                return BinarySerialization.Endianness.Little;
+                return Constants.Endianness.Little;
 
             var indicator = System.Convert.ToUInt32(value);
 
             if (indicator == LittleEndiannessMagic)
-                return BinarySerialization.Endianness.Little;
+                return Constants.Endianness.Little;
 
             if (indicator == BigEndiannessMagic)
-                return BinarySerialization.Endianness.Big;
+                return Constants.Endianness.Big;
 
             throw new InvalidOperationException("Invalid endian magic");
         }

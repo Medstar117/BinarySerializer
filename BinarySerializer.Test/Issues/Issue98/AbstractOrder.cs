@@ -1,4 +1,7 @@
-﻿namespace BinarySerialization.Test.Issues.Issue98
+﻿using BinarySerialization.Attributes;
+using BinarySerialization.Constants;
+
+namespace BinarySerialization.Test.Issues.Issue98
 {
     public class AbstractOrder
     {

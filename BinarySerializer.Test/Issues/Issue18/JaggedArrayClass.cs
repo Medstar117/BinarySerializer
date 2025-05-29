@@ -1,4 +1,6 @@
-﻿namespace BinarySerialization.Test.Issues.Issue18
+﻿using BinarySerialization.Attributes;
+
+namespace BinarySerialization.Test.Issues.Issue18
 {
     public class JaggedArrayClass
     {

@@ -1,4 +1,5 @@
-﻿using System.Security.Cryptography;
+﻿using BinarySerialization.Attributes;
+using System.Security.Cryptography;
 
 namespace BinarySerialization.Test.Value
 {

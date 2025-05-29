@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BinarySerialization.Interfaces;
+using System;
 using System.Reflection;
 
 namespace BinarySerialization

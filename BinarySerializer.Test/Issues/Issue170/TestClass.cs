@@ -1,14 +1,8 @@
-﻿
-namespace Test_BinarySerialzer
+﻿using BinarySerialization.Attributes;
+using Zookeeper.Structs;
+
+namespace BinarySerialization.Test.Issues.Issue170
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Text;
-
-    using BinarySerialization;
-
-    using Zookeeper.Structs;
-
     class TestClass
     {
         [FieldOrder(0)]

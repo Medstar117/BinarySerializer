@@ -1,4 +1,6 @@
-﻿namespace BinarySerialization.Test.Ignore
+﻿using BinarySerialization.Attributes;
+
+namespace BinarySerialization.Test.Ignore
 {
     public class IgnoreBindingClass
     {

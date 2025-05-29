@@ -10,7 +10,7 @@ namespace BinarySerialization.Test.Issues.Issue33
         [TestMethod]
         public void DeserializeMessage()
         {
-            var serializer = new BinarySerializer {Endianness = BinarySerialization.Endianness.Little};
+            var serializer = new BinarySerializer {Endianness = Constants.Endianness.Little};
             var inBytes = new byte[]
             {
                 0xFE, 0x31, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,

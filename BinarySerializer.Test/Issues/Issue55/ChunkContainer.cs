@@ -1,3 +1,5 @@
+using BinarySerialization.Attributes;
+
 namespace BinarySerialization.Test.Issues.Issue55
 {
     public class ChunkContainer

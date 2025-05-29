@@ -1,4 +1,6 @@
-﻿namespace BinarySerialization.Test.Issues.Issue148
+﻿using BinarySerialization.Attributes;
+
+namespace BinarySerialization.Test.Issues.Issue148
 {
     public class ProtocolClass
     {

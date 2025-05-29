@@ -1,4 +1,7 @@
-﻿namespace BinarySerialization.Test.Issues.Issue33
+﻿using BinarySerialization.Attributes;
+using BinarySerialization.Constants;
+
+namespace BinarySerialization.Test.Issues.Issue33
 {
     public class Bin3Data
     {

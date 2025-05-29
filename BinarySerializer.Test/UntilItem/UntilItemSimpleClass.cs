@@ -1,4 +1,6 @@
-﻿namespace BinarySerialization.Test.UntilItem
+﻿using BinarySerialization.Attributes;
+
+namespace BinarySerialization.Test.UntilItem
 {
     public class UntilItemSimpleClass
     { 

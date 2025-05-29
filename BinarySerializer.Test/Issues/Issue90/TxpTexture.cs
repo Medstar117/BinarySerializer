@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using BinarySerialization.Attributes;
+using System.Collections.Generic;
 
 namespace BinarySerialization.Test.Issues.Issue90
 {

@@ -1,4 +1,6 @@
-﻿namespace BinarySerialization.Test.Issues.Issue61
+﻿using BinarySerialization.Attributes;
+
+namespace BinarySerialization.Test.Issues.Issue61
 {
     public class Message
     {

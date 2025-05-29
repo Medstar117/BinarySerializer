@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.IO;
+using BinarySerialization.Attributes;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 #pragma warning disable 649

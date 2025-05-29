@@ -1,4 +1,7 @@
-﻿namespace BinarySerialization.Test.Issues.Issue12
+﻿using BinarySerialization.Attributes;
+using BinarySerialization.Constants;
+
+namespace BinarySerialization.Test.Issues.Issue12
 {
     public class RefeChunk : Chunk
     {

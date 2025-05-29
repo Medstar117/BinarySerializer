@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BinarySerialization.Attributes;
+using BinarySerialization.Interfaces;
+using System;
 using System.IO;
 
 namespace BinarySerialization.Test.Custom
@@ -11,7 +13,7 @@ namespace BinarySerialization.Test.Custom
         [Ignore]
         public uint Value { get; set; }
 
-        public void Deserialize(Stream stream, BinarySerialization.Endianness endianness,
+        public void Deserialize(Stream stream, Constants.Endianness endianness,
             BinarySerializationContext context)
         {
             var more = true;
@@ -33,7 +35,7 @@ namespace BinarySerialization.Test.Custom
             }
         }
 
-        public void Serialize(Stream stream, BinarySerialization.Endianness endianness,
+        public void Serialize(Stream stream, Constants.Endianness endianness,
             BinarySerializationContext context)
         {
             var value = Value;

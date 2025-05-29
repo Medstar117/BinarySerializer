@@ -1,4 +1,7 @@
-﻿namespace BinarySerialization.Test.Issues.Issue38
+﻿using BinarySerialization.Attributes;
+using BinarySerialization.Constants;
+
+namespace BinarySerialization.Test.Issues.Issue38
 {
     /// <summary>
     ///     the position data structure

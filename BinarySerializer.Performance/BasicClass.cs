@@ -1,5 +1,5 @@
 ﻿using System;
-using BinarySerialization;
+using BinarySerialization.Attributes;
 
 namespace BinarySerializer.Performance
 {

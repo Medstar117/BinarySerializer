@@ -1,4 +1,5 @@
 using BinarySerialization;
+using BinarySerialization.Interfaces;
 
 namespace BinarySerializer.Performance
 {

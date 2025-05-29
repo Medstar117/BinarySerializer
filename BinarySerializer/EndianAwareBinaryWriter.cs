@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BinarySerialization.Constants;
+using BinarySerialization.Helpers;
+using System;
 using System.IO;
 using System.Text;
 

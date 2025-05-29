@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using BinarySerialization.Streams;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace BinarySerialization.Test.Streams

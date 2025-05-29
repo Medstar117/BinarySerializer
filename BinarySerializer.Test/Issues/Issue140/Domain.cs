@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using BinarySerialization.Attributes;
+using BinarySerialization.Interfaces;
+using System.Collections.Generic;
 using System.IO;
 
 namespace BinarySerialization.Test.Issues.Issue140
@@ -11,12 +13,12 @@ namespace BinarySerialization.Test.Issues.Issue140
         [Ignore]
         public string Name => ToString();
 
-        public void Serialize(Stream stream, BinarySerialization.Endianness endianness, BinarySerializationContext context)
+        public void Serialize(Stream stream, Constants.Endianness endianness, BinarySerializationContext context)
         {
             //Code
         }
 
-        public void Deserialize(Stream stream, BinarySerialization.Endianness endianness, BinarySerializationContext context)
+        public void Deserialize(Stream stream, Constants.Endianness endianness, BinarySerializationContext context)
         {
             //Code
         }

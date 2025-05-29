@@ -1,13 +1,15 @@
-namespace Zookeeper.Structs
-{
-    using System;
-    using System.IO;
-    using System.Linq;
-    using System.Net;
-    using BinarySerialization;
+using System;
+using System.IO;
+using System.Linq;
+using System.Net;
+using BinarySerialization.Attributes;
+using BinarySerialization.Interfaces;
+using Zookeeper.Structs;
 
+namespace BinarySerialization.Test.Issues.Issue170
+{
     /// <summary> Exception for signalling IP end point errors. </summary>
-    /// <seealso cref="BinarySerialization.IBinarySerializable"/>
+    /// <seealso cref="IBinarySerializable"/>
     public class IPAddressEx : IBinarySerializable, IIPAddressEx
     {
         /// <summary> Gets or sets the end point. </summary>
@@ -19,22 +21,22 @@ namespace Zookeeper.Structs
         /// <param name="stream">               The stream. </param>
         /// <param name="endianness">           The endianness. </param>
         /// <param name="serializationContext"> Context for the serialization. </param>
-        public void Deserialize(Stream stream, Endianness endianness, BinarySerializationContext serializationContext)
+        public void Deserialize(Stream stream, Constants.Endianness endianness, BinarySerializationContext serializationContext)
         {
             var ip = new byte[4];
 
             stream.Read(ip, 0, ip.Length);
 
-            this.Address = new IPAddress(ip.Reverse().ToArray());
+            Address = new IPAddress(ip.Reverse().ToArray());
         }
 
         /// <summary> Serialize this object to the given stream. </summary>
         /// <param name="stream">               The stream. </param>
         /// <param name="endianness">           The endianness. </param>
         /// <param name="serializationContext"> Context for the serialization. </param>
-        public void Serialize(Stream stream, Endianness endianness, BinarySerializationContext serializationContext)
+        public void Serialize(Stream stream, Constants.Endianness endianness, BinarySerializationContext serializationContext)
         {
-            stream.Write(this.Address.GetAddressBytes().Reverse().ToArray(), 0, 4);
+            stream.Write(Address.GetAddressBytes().Reverse().ToArray(), 0, 4);
         }
     }
 }

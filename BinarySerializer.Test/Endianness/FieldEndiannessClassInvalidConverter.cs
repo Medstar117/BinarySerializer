@@ -1,4 +1,6 @@
-﻿namespace BinarySerialization.Test.Endianness
+﻿using BinarySerialization.Attributes;
+
+namespace BinarySerialization.Test.Endianness
 {
     public class FieldEndiannessInvalidConverterClass
     {

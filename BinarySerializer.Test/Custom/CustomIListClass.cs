@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using BinarySerialization.Attributes;
+using BinarySerialization.Interfaces;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 
@@ -71,7 +73,7 @@ namespace BinarySerialization.Test.Custom
             set => _list[index] = value;
         }
 
-        public void Serialize(Stream stream, BinarySerialization.Endianness endianness, BinarySerializationContext serializationContext)
+        public void Serialize(Stream stream, Constants.Endianness endianness, BinarySerializationContext serializationContext)
         {
             foreach (var item in this)
             {
@@ -81,7 +83,7 @@ namespace BinarySerialization.Test.Custom
             }
         }
 
-        public void Deserialize(Stream stream, BinarySerialization.Endianness endianness, BinarySerializationContext serializationContext)
+        public void Deserialize(Stream stream, Constants.Endianness endianness, BinarySerializationContext serializationContext)
         {
             while (stream.Position < stream.Length)
             {

@@ -1,4 +1,6 @@
-﻿namespace BinarySerialization.Test.Issues.Issue106
+﻿using BinarySerialization.Attributes;
+
+namespace BinarySerialization.Test.Issues.Issue106
 {
     public class Buffer
     {

@@ -1,4 +1,5 @@
-﻿using BinarySerialization;
+﻿using BinarySerialization.Attributes;
+using BinarySerialization.Constants;
 
 namespace BinarySerializer.Test.Issues.Issue57
 {

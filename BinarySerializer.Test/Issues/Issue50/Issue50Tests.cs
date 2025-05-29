@@ -9,7 +9,7 @@ namespace BinarySerialization.Test.Issues.Issue50
         [TestMethod]
         public void RoundtripTest()
         {
-            var serializer = new BinarySerializer {Endianness = BinarySerialization.Endianness.Big};
+            var serializer = new BinarySerializer {Endianness = Constants.Endianness.Big};
 
             var expected = new MsgHeader {PayloadType = PlcPayloadType.Value3};
 

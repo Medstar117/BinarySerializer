@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Reflection;
+using BinarySerialization.Attributes;
+using BinarySerialization.Constants;
 using BinarySerialization.Graph.ValueGraph;
+using BinarySerialization.Interfaces;
 
 namespace BinarySerialization.Graph.TypeGraph
 {

@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using BinarySerialization.CustomEventArgs;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace BinarySerialization.Test
@@ -90,7 +91,7 @@ namespace BinarySerialization.Test
                 _serializer.Serialize(stream, cereal);
                 stream.Position = 0;
 
-                Assert.AreEqual(BinarySerialization.Endianness.Big, _serializer.Endianness);
+                Assert.AreEqual(Constants.Endianness.Big, _serializer.Endianness);
 
                 //File.WriteAllBytes("c:\\temp\\out.bin", stream.ToArray());
 
@@ -143,7 +144,7 @@ namespace BinarySerialization.Test
             {
                 var isLittleEndian = bool.Parse((string) e.Value);
                 if (!isLittleEndian)
-                    _serializer.Endianness = BinarySerialization.Endianness.Big;
+                    _serializer.Endianness = Constants.Endianness.Big;
             }
 
             Debug.WriteLine("write {0}: {1} @ {2}", e.MemberName, e.Value, e.Offset);
@@ -155,7 +156,7 @@ namespace BinarySerialization.Test
             {
                 var isLittleEndian = bool.Parse((string) e.Value);
                 if (!isLittleEndian)
-                    _serializer.Endianness = BinarySerialization.Endianness.Big;
+                    _serializer.Endianness = Constants.Endianness.Big;
             }
 
             Debug.WriteLine("read {0}: {1} @ {2}", e.MemberName, e.Value, e.Offset);

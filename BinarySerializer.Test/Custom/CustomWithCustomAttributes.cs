@@ -1,19 +1,20 @@
 ﻿using System.IO;
 using System.Linq;
 using System.Reflection;
+using BinarySerialization.Interfaces;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace BinarySerialization.Test.Custom
 {
     public class CustomWithCustomAttributes : IBinarySerializable
     {
-        public void Serialize(Stream stream, BinarySerialization.Endianness endianness, BinarySerializationContext serializationContext)
+        public void Serialize(Stream stream, Constants.Endianness endianness, BinarySerializationContext serializationContext)
         {
             var memberInfo = serializationContext.MemberInfo;
             AssertCustomAttribute(memberInfo);
         }
 
-        public void Deserialize(Stream stream, BinarySerialization.Endianness endianness, BinarySerializationContext serializationContext)
+        public void Deserialize(Stream stream, Constants.Endianness endianness, BinarySerializationContext serializationContext)
         {
             var memberInfo = serializationContext.MemberInfo;
             AssertCustomAttribute(memberInfo);

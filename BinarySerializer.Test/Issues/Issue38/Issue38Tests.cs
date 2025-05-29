@@ -19,7 +19,7 @@ namespace BinarySerialization.Test.Issues.Issue38
         //[TestMethod]
         public void DeserializeMessageTest()
         {
-            var serializer = new BinarySerializer {Endianness = BinarySerialization.Endianness.Little};
+            var serializer = new BinarySerializer {Endianness = Constants.Endianness.Little};
             serializer.MemberDeserializing +=
                 (sender, args) => { Debug.Write($"Deserializing {args.MemberName}, stream offset {args.Offset}"); };
 

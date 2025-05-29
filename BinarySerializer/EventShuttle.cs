@@ -1,4 +1,5 @@
 ﻿using System;
+using BinarySerialization.CustomEventArgs;
 using BinarySerialization.Graph.ValueGraph;
 
 namespace BinarySerialization

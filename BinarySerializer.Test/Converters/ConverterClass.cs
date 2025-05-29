@@ -1,3 +1,5 @@
+using BinarySerialization.Attributes;
+
 namespace BinarySerialization.Test.Converters
 {
     public class ConverterClass

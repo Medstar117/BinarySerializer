@@ -1,4 +1,6 @@
-﻿namespace BinarySerialization.Test.Issues.Issue76
+﻿using BinarySerialization.Attributes;
+
+namespace BinarySerialization.Test.Issues.Issue76
 {
     public class SmnCommandContainer : CommandContainer
     {

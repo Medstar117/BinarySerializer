@@ -1,4 +1,6 @@
-﻿namespace BinarySerialization.Test.Issues.Issue82
+﻿using BinarySerialization.Attributes;
+
+namespace BinarySerialization.Test.Issues.Issue82
 {
     public class SerializeWhenClass
     {

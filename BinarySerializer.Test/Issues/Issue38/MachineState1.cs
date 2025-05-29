@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BinarySerialization.Attributes;
+using BinarySerialization.Constants;
+using System;
 using System.Collections.ObjectModel;
 
 namespace BinarySerialization.Test.Issues.Issue38

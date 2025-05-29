@@ -1,4 +1,6 @@
-﻿namespace BinarySerialization.Test
+﻿using BinarySerialization.Interfaces;
+
+namespace BinarySerialization.Test
 {
     public class DoubleOutlierConverter : IValueConverter
     {

@@ -1,4 +1,7 @@
-﻿namespace BinarySerialization.Test.Issues.Issue76
+﻿using BinarySerialization.Attributes;
+using BinarySerialization.Constants;
+
+namespace BinarySerialization.Test.Issues.Issue76
 {
     public class Packet
     {

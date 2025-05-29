@@ -1,3 +1,5 @@
+using BinarySerialization.Attributes;
+
 namespace BinarySerialization.Test.Subtype
 {
     public class IncompleteSubtypeClass

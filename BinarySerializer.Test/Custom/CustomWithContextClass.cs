@@ -1,11 +1,12 @@
 ﻿using System.IO;
+using BinarySerialization.Interfaces;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace BinarySerialization.Test.Custom
 {
     public class CustomWithContextClass : IBinarySerializable
     {
-        public void Serialize(Stream stream, BinarySerialization.Endianness endianness,
+        public void Serialize(Stream stream, Constants.Endianness endianness,
             BinarySerializationContext serializationContext)
         {
             Assert.AreEqual(typeof(CustomWithContextContainerClass), serializationContext.ParentType);
@@ -13,7 +14,7 @@ namespace BinarySerialization.Test.Custom
             // TODO check root context
         }
 
-        public void Deserialize(Stream stream, BinarySerialization.Endianness endianness,
+        public void Deserialize(Stream stream, Constants.Endianness endianness,
             BinarySerializationContext serializationContext)
         {
             Assert.AreEqual(typeof(CustomWithContextContainerClass), serializationContext.ParentType);

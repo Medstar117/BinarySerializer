@@ -1,4 +1,6 @@
-﻿namespace BinarySerialization.Test.Issues.Issue39
+﻿using BinarySerialization.Attributes;
+
+namespace BinarySerialization.Test.Issues.Issue39
 {
     public class InputsStateFrameData
     {
